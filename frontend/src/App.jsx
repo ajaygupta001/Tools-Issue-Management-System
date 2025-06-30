@@ -13,6 +13,7 @@ import MechanicDashboard from "./components/MechanicDashboard";
 import IssueTool from "./components/IssueTool";
 import ReturnTool from "./components/ReturnTool";
 import IssueRegister from "./components/IssueRegister";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
         <Route path="/issue-tool" element={<IssueTool />} />
         <Route path="/return-tool" element={<ReturnTool />} />
         <Route path="/issue-register" element={<IssueRegister />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} /> 
+ 
       </Routes>
     </Router>
   );
