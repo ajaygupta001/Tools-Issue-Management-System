@@ -5,13 +5,18 @@ const userSchema = new mongoose.Schema(
     name: {
       type: String,
       required: [true, "username is required"],
+      trim:true,
+      minLength:2,
+      maxLength:50,
     },
     email: {
       type: String,
       required: [true, "email is required"],
       unique: true,
+      trim:true,
       lowercase: true,
       isEmail: true,
+      match:[/\S+@\S+\.\S+/, 'Please fill valif email address'],
     },
     password: {
       type: String,
@@ -20,6 +25,7 @@ const userSchema = new mongoose.Schema(
         options: { min: 8 },
         errorMessage: "Password should be at least 8 chars",
       },
+      minLength:6,
     },
     mobile: {
       type: Number,
