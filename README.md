@@ -42,11 +42,19 @@ Other Tools:
 
 ### 1. Clone the repo
 
+//Backend
+--npm i 
+--npm run start
+
+//frontend
+--npm i
+--npm run dev
+
 ```bash
 git clone https://github.com/ajaygupta001/Tools-Issue-Management-System.git
 cd Tools-Issue-Management-System
 
-
+//add .env file 
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/tools-management
 JWT_SECRET=your_jwt_secret_key
